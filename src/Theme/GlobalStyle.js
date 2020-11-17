@@ -27,10 +27,7 @@ const GlobalStyled = createGlobalStyle`
   }
   
   body {
-    min-height: 100%;
     line-height: 1;
-    display: flex;
-    flex-direction: column;
     
     background-color: ${({ theme }) => theme.darkGray};
     color: ${({theme}) => theme.primary};

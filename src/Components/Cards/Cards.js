@@ -2,6 +2,7 @@ import React from 'react';
 import { CardsWrapper, Card, CardTitle, CardImage } from './styles';
 import { Link } from 'react-router-dom';
 import useFetch from '../../Hooks/useFetch';
+import Loading from '../Loading/Loading';
 
 const Cards = () => {
   const { req, data, loading } = useFetch();
@@ -11,7 +12,7 @@ const Cards = () => {
 
   return (
     <CardsWrapper>
-      {loading && <p>Carregando...</p>}
+      {loading && <Loading />}
 
       {data &&
         data.map(({ id, nome, fotos }) => (

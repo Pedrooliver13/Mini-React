@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import { FadeIn } from '../../Theme/FadeIn';
 
 export const ProductWrapper = styled.section`
   display: flex;
+  animation: ${FadeIn} .6s ease;
 `;
 
 export const ProductImages = styled.div`
-  width: 900px;
+  max-width: 400px;
+  width: 100%;
   margin-right: 24px;
 `;
 
