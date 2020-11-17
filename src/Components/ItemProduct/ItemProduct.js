@@ -11,7 +11,7 @@ import {
 
 import Modal from '../Modal/Modal';
 
-const Product = ({ data }) => {
+const ItemProduct = ({ data }) => {
   const [showModal, setShowModal] = React.useState(false);
   const [photoModal, setPhotoModal] = React.useState('');
   const { fotos, nome, preco, descricao } = data;
@@ -46,4 +46,4 @@ const Product = ({ data }) => {
   );
 };
 
-export default Product;
+export default ItemProduct;

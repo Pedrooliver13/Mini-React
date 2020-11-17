@@ -5,7 +5,7 @@ import { Container } from '../../Theme/Container';
 import useFetch from '../../Hooks/useFetch';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-import Product from '../../Components/Product/Product';
+import ItemProduct from '../../Components/ItemProduct/ItemProduct';
 import Loading from '../../Components/Loading/Loading';
 
 const Show = () => {
@@ -20,7 +20,7 @@ const Show = () => {
     <Container>
       <Header />
       {loading && <Loading />}
-      {data && <Product data={data} /> }
+      {data && <ItemProduct data={data} /> }
       <Footer />
     </Container>
   );
