@@ -9,27 +9,40 @@ import {
   ProductDescription,
 } from './styles';
 
+import Modal from '../Modal/Modal';
+
 const Product = ({ data }) => {
+  const [showModal, setShowModal] = React.useState(false);
+  const [photoModal, setPhotoModal] = React.useState('');
   const { fotos, nome, preco, descricao } = data;
+
   const priceCurrency = Number(preco).toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL',
   });
 
-  return (
-    <ProductWrapper>
-      <ProductImages>
-        {fotos.map((item, index) => (
-          <Image key={index} src={item.src} alt={item.title} />
-        ))}
-      </ProductImages>
+  const handleClick = React.useCallback(({ target }) => {
+    setPhotoModal(target.src);
+    setShowModal(true);
+  }, []);
 
-      <ProductContent>
-        <ProductTitle>{nome}</ProductTitle>
-        <ProductPrice>{priceCurrency}</ProductPrice>
-        <ProductDescription>{descricao}</ProductDescription>
-      </ProductContent>
-    </ProductWrapper>
+  return (
+    <>
+      <ProductWrapper>
+        <ProductImages>
+          {fotos.map(({ src, title }, index) => (
+            <Image key={index} src={src} alt={title} onClick={handleClick} />
+          ))}
+        </ProductImages>
+
+        <ProductContent>
+          <ProductTitle>{nome}</ProductTitle>
+          <ProductPrice>{priceCurrency}</ProductPrice>
+          <ProductDescription>{descricao}</ProductDescription>
+        </ProductContent>
+      </ProductWrapper>
+      <Modal active={showModal} setActive={setShowModal} photo={photoModal} />
+    </>
   );
 };
 

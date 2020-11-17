@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+import {FadeIn} from '../../Theme/FadeIn';
 
 export const ContactWrapper = styled.section`
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   margin: 8px;
+
+  animation: ${FadeIn} .6s ease;
 `;
 
 export const Image = styled.img`

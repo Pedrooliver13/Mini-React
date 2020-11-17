@@ -2,6 +2,8 @@ import React from 'react';
 import { ContactWrapper, ContactContent, Image, ContactTitle, ContactList } from './styles';
 import { Container } from '../../Theme/Container';
 
+import photo from '../../img/type-writer.jpg';
+
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 
@@ -12,7 +14,7 @@ const Contato = () => {
 
       <ContactWrapper>
         <Image
-          src="https://source.unsplash.com/user/erondu/500x700"
+          src={photo}
           alt="Imagem de contato"
         />
         

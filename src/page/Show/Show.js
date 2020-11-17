@@ -6,6 +6,7 @@ import useFetch from '../../Hooks/useFetch';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import Product from '../../Components/Product/Product';
+import Loading from '../../Components/Loading/Loading';
 
 const Show = () => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const Show = () => {
   return (
     <Container>
       <Header />
-      {loading && <p>Carregando...</p>}
+      {loading && <Loading />}
       {data && <Product data={data} /> }
       <Footer />
     </Container>
