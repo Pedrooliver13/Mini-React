@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <ButtonLink to="/">Produtos</ButtonLink>
-      <ButtonLink to="contato">Contato</ButtonLink>
+      <ButtonLink to="/contato">Contato</ButtonLink>
     </HeaderWrapper>
   );
 };

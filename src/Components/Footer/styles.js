@@ -8,7 +8,7 @@ export const CopyWrapper = styled.footer`
   p {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
-    line-height: 5;
+    line-height: 4;
     text-transform: uppercase;
   }
 `;

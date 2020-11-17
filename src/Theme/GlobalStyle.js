@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import Colors from './Colors';
 
 const GlobalStyled = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -33,8 +32,8 @@ const GlobalStyled = createGlobalStyle`
     display: flex;
     flex-direction: column;
     
-    background-color: ${Colors.darkGray};
-    color: ${Colors.primary};
+    background-color: ${({ theme }) => theme.darkGray};
+    color: ${({theme}) => theme.primary};
   }
   ol, ul {
     list-style: none;

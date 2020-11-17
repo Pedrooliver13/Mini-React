@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactRow, ContactContent, ContactImages } from './styles';
+import { ContactWrapper, ContactContent, Image, ContactTitle, ContactList } from './styles';
 import { Container } from '../../Theme/Container';
 
 import Header from '../../Components/Header/Header';
@@ -10,15 +10,20 @@ const Contato = () => {
     <Container>
       <Header />
 
-      <ContactRow>
-        <div>
-          <ContactImages src="https://source.unsplash.com/user/erondu/500x700" />
-        </div>
-
+      <ContactWrapper>
+        <Image
+          src="https://source.unsplash.com/user/erondu/500x700"
+          alt="Imagem de contato"
+        />
+        
         <ContactContent>
-          <h1>EU sou o contato</h1>;
+          <ContactTitle>Entre em contato</ContactTitle>
+          <ContactList> 
+            <li>(43) 9999-8888</li>
+            <li>pedroOliver13@hotmail.com</li>
+          </ContactList>
         </ContactContent>
-      </ContactRow>
+      </ContactWrapper>
 
       <Footer />
     </Container>
