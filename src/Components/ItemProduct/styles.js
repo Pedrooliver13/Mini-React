@@ -17,6 +17,8 @@ export const Image = styled.img`
   width: 100%;
   margin: 8px;
   border-radius: 5px;
+  pointer-events: all;
+  cursor: pointer;
   overflow: hidden;
   object-fit: contain;
 `

@@ -7,6 +7,8 @@ export const CardsWrapper = styled.section`
   justify-content: center;
   grid-template-columns: repeat(3, minmax(150px, 1fr));
   gap: 4px;
+
+  margin: 12px auto; 
 `;
 
 export const Card = styled.div`
